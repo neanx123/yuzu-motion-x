@@ -1,0 +1,28 @@
+name: Build Yuzu Motion X
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+
+      - name: Publish single-file exe
+        run: dotnet publish YuzuMotionX.csproj -c Release -o publish
+
+      - name: Name the exe
+        shell: pwsh
+        run: Copy-Item "publish/YuzuMotionX.exe" "publish/Yuzu Motion X v1.0.exe"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Yuzu-Motion-X-v1.0-windows
+          path: publish/Yuzu Motion X v1.0.exe
