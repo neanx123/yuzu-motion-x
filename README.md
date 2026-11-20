@@ -6,7 +6,7 @@ device, profiles and server:port. It is the combination of *Yuzu Motion* (contro
 experimental **Keyboard Motion**, in one window. Native Windows app (.NET 8), one self-contained `.exe`.
 The **Tutorial** button in the app opens this same guide.
 
-(app-screen.png)
+<img src="app-screen.png" alt="" />
 
 ## How to Set Up Motion Controls
 Follow these steps to get started:
