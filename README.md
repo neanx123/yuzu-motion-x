@@ -7,7 +7,7 @@ experimental **Keyboard Motion**, in one window. Native Windows app (.NET 8), on
 The **Tutorial** button in the app opens this same guide.
 
 <p align="center">
-  <img src="app-screen.png" width="250">
+  <img src="app-screen.png">
 </p>
 
 ## How to Set Up Motion Controls
