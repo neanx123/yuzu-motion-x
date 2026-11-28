@@ -1,0 +1,130 @@
+Yuzu Motion X - Changelog
+By NeanX
+
+=====================================================================
+Version 1.2
+=====================================================================
+
+NEW: AXIS OVERRIDE DOTS (Controller and Mouse)
+ - New "Override dots" button under the round "mouse / stick drag" circle. It
+   shows 8 draggable dots: Up, Down, Left, Right, Up-Left, Up-Right, Down-Left,
+   Down-Right.
+ - Drag a dot to where you want that direction to really go. When you push that
+   direction, the output (and the blue point in the circle) goes to the dot's
+   position. Directions between two dots blend smoothly.
+   Example (Barreling Along): put the "Right" dot at the top-left and the "Left"
+   dot at the bottom-left; pushing right then moves the blue point to the
+   top-left, which is what that minigame needs to move the character right.
+ - The hollow ring shows what you push, the blue point shows where it goes.
+ - Right-click a dot = back home. "Reset dots" = all dots back home.
+ - The dots are saved inside profiles. DEFAULT has none (so DEFAULT output is
+   exactly as before) and, like everything in DEFAULT, they are locked there.
+ - The round circle is bigger (170 px) so the dots are easy to place.
+ - Keyboard Motion does not need it: every keyboard point can already be placed
+   anywhere.
+
+NEW: BETTER SCALING WHEN THE WINDOW CHANGES SIZE
+ - The page now scales with the window: maximize it for big, readable sections;
+   make it narrow to park it beside the game. Sizes, texts and spacing all scale.
+ - Wide windows use two columns; narrow or tall windows switch to ONE stacked
+   column automatically, so nothing is cut off.
+ - New "Zoom" box (top right): Auto (follows the window) or 70% - 200%.
+   The choice is saved.
+ - The window can now be made much smaller (minimum 480 px wide).
+
+PLAYER TAB LAYOUT
+ - "Device:" moved below the Controller / Mouse / Keyboard Motion buttons.
+ - "Apply" and "Default" moved below the Server : port boxes.
+ - The long "What is Server:Port?" note in the player tab is gone; the explanation
+   now lives in the Setup Guide (and was merged with the old port list so it
+   appears only once).
+
+SETUP GUIDE
+ - "Tutorial" renamed "Setup Guide" (button and window).
+ - New section "What is Server:Port?"; new sections for the override dots and for
+   window size / Zoom.
+
+LOOK
+ - Section titles PLAYER N - DEVICE AND SERVER, PROFILE (SETTINGS FOR A GAME),
+   MOTION STYLE, TEST IT (4-SECOND DEMO) and ADJUST now use the same big blue
+   style as POSITION.
+ - The DEFAULT profile observation uses a squarer "software notice" font
+   (Bahnschrift, or Consolas if it is not installed).
+
+OTHER
+ - Version 1.2 everywhere (window, Setup Guide, exe name, build files).
+ - The settings file is compatible with 1.1 / 1.0 (it only gains the Zoom choice
+   and the override dots inside profiles).
+ - DEFAULT is unchanged: same values, same motion output.
+
+=====================================================================
+Version 1.1
+=====================================================================
+
+PROFILES
+ - Removed ALL pre-made profiles (the green "*" ones) for every device type
+   (Controller, Mouse, Keyboard). Only the locked DEFAULT profile is left.
+ - DEFAULT is unchanged: every value and the motion it produces are exactly
+   the same as in version 1.0. The only thing renamed is the label of its
+   position (see POSITION below): the old "Vertical - top down" is now called
+   "VERTICAL UPSIDE DOWN FRONT" (same angles).
+ - Your own (white) profiles keep working. If you were using a pre-made "*"
+   profile when you closed version 1.0, the program starts in DEFAULT instead.
+
+NEW: POSITION (big box, replaces "Neutral position")
+ - New section called POSITION, placed where ADJUST used to be, with a big
+   title so it is easy to spot.
+ - Joy-Con L / Joy-Con R / Pro Controller buttons moved into POSITION.
+ - 12 base positions, one click each, for Joy-Con and Pro Controller:
+     STRAIGHT: VERTICAL FRONT, VERTICAL BACK, VERTICAL UPSIDE DOWN FRONT,
+               VERTICAL UPSIDE DOWN BACK, HORIZONTAL FRONT, HORIZONTAL BACK,
+               HORIZONTAL INVERTED FRONT, HORIZONTAL INVERTED BACK
+     FLAT:     FLAT FACING HORIZONTALLY UP, FLAT FACING HORIZONTALLY DOWN,
+               FLAT FACING VERTICALLY UP, FLAT FACING VERTICALLY DOWN
+   (FRONT = the face with stick/buttons points at the screen, BACK = it points
+   at you. TOP = the stick end of a Joy-Con / the trigger edge of a Pro Controller.)
+ - LEAN: "Leaning FORWARD" / "Leaning BACKWARD" works on any base position, with
+   an adjustable lean angle (5-80 degrees). This covers all the leaning
+   vertical/horizontal positions and all their inverted versions.
+ - "Set a custom position...": rotation rings (red / green / blue) appear in the
+   live preview. Drag a ring with the mouse to turn the controller, then press
+   "Apply position" (or "Cancel").
+ - "Use current pose" and "Recenter now" are in POSITION too.
+ - "When I let go of the stick: Return to neutral / Stay where it stopped" moved
+   into POSITION (mouse: "When I stop moving the mouse", keyboard: "When I
+   release the keys"). It is now available for the keyboard device as well.
+ - The old Neutral position drop-down and its custom-angle sliders are gone.
+
+LAYOUT
+ - ADJUST moved below the live preview (left side).
+
+NEW: MOTION STYLE "MOVE"
+ - The whole controller moves away from its start position: stick up = up, down =
+   down, right = right, left = left, and comes back (or stays, if "Stay where it
+   stopped" is chosen).
+ - Option shown with this style: "Move: change Up/Down to Forward/Backward".
+ - New "Test Move" button; the live preview shows the controller moving.
+ - Works with all devices (controller, mouse, keyboard).
+
+FIXES
+ - The "Player is OFF" button now shows from the start (before, its text only
+   appeared after switching a player ON and OFF once).
+
+ADVANCED SETTINGS
+ - Removed the redundant "Neutral position - custom angles" card (replaced by
+   POSITION) and the "Joy-Con hold style" card (the HORIZONTAL / INVERTED
+   positions do the same job).
+ - "Max angle from neutral" renamed "Max angle from the position".
+
+OTHER
+ - Version number 1.1 everywhere (window, tutorial, exe name, build files).
+ - The settings file keeps the same name and format, so your saved profiles and
+   settings carry over from version 1.0.
+ - Tutorial window and README updated.
+
+=====================================================================
+Version 1.0
+=====================================================================
+ - First release: Controller + Mouse + experimental Keyboard Motion in one app,
+   8 player tabs with their own server:port, device lists with full names,
+   locked DEFAULT profile, user profiles, Tutorial window.
